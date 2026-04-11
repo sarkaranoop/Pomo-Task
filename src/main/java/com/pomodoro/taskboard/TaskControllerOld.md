@@ -1,5 +1,6 @@
 package com.pomodoro.taskboard;
 
+import com.pomodoro.taskboard.entity.Task;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,8 +11,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @RestController
 @RequestMapping("/api/tasks")
-public class TaskController {
-    private final Map<String,Task> taskStore = new ConcurrentHashMap<>();
+public class TaskControllerOld {
+    private final Map<String, Task> taskStore = new ConcurrentHashMap<>();
 
     @GetMapping
     public List<Task> getAlltasks(){
